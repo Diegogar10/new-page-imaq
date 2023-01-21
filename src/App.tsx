@@ -1,6 +1,6 @@
 import React from "react"
 import { HashRouter, Routes, Route } from "react-router-dom"
-import Nav from "./components/Nav/Nav"
+import NavBar from "./components/NavBar/NavBar"
 import Contacto from "./pages/Contacto"
 import Equipos from "./pages/Equipos"
 import Home from "./pages/Home"
@@ -12,7 +12,7 @@ function App() {
   
   return (
     <HashRouter>
-      <Nav/>
+      <NavBar/>
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/nosotros" element={<Nosotros/>} />

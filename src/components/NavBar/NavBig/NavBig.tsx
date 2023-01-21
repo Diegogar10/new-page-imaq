@@ -1,18 +1,13 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import useSizeScreen from '../../hooks/useSizeScreen';
-import ButtonGeneric from '../ButtonGeneric/ButtonGeneric';
-import logo from '../../assets/LogoImaq.png';
-import './Nav.scss'
+import ButtonGeneric from '../../ButtonGeneric/ButtonGeneric';
+import logo from '../../../assets/LogoImaq.png';
+import './NavBig.scss';
 
-const Nav = () => {
+const NavBig = () => {
 
-  const {width, height} = useSizeScreen();
-
-  if(width > 1023 ){ 
-    return(
-      <nav className='menu-container'>
-        <Link to='/'><img src={logo} alt='logo' className='logo'/></Link>
+  return(
+    <nav className='menu-container'>
+      <Link to='/'><img src={logo} alt='logo' className='logo'/></Link>
         <ul>
           <li><Link to='/nosotros'><ButtonGeneric>Nosotros</ButtonGeneric></Link></li>
           <li><Link to='/equipos-y-productos'><ButtonGeneric>Equipos y productos</ButtonGeneric></Link></li>
@@ -20,10 +15,8 @@ const Nav = () => {
           <li><Link to='/contacto'><ButtonGeneric>Contacto</ButtonGeneric></Link></li>
           <li><Link to='/cuenta'><ButtonGeneric>Cuenta</ButtonGeneric></Link></li>
         </ul>      
-      </nav>  
-    )} 
-  return <p>Otro Menu</p>
-    
-  
+    </nav> 
+  )
 }
-export default Nav;
+
+export default NavBig;

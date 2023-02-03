@@ -7,7 +7,6 @@ import Home from "./pages/Home"
 import Nosotros from "./pages/Nosotros"
 import Servicios from "./pages/Servicios"
 import Sesion from "./pages/Sesion"
-
 function App() {
   
   return (

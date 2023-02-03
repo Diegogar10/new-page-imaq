@@ -6,13 +6,9 @@ import NavSmall from './NavSmall/NavSmall';
 const NavBar = () => {
 
   const {width, height} = useSizeScreen();
-
-  if(width > 1023 ){ 
-    return(
-      <NavBig/> 
-    )} 
-  return <NavSmall/>
     
+  return (width > 1023) && <NavBig/> || <NavSmall/> 
+  
   
 }
 export default NavBar;

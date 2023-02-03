@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Colors } from '../../../utils/Colors';
 
 export default function NavSmall() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -17,8 +18,8 @@ export default function NavSmall() {
   return (
     <div>
       <Button
-        id="demo-positioned-button"
-        aria-controls={open ? 'demo-positioned-menu' : undefined}
+        id="positioned-button"
+        aria-controls={open ? 'positioned-menu' : undefined}
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
@@ -26,7 +27,7 @@ export default function NavSmall() {
         <MenuIcon sx={{color:'white'}}/>
       </Button>
       <Menu
-        id="demo-positioned-menu"
+        id="positioned-menu"
         aria-labelledby="demo-positioned-button"
         anchorEl={anchorEl}
         open={open}
@@ -40,11 +41,11 @@ export default function NavSmall() {
           horizontal: 'left',
         }}
       >
-        <MenuItem onClick={handleClose}>Home</MenuItem>
-        <MenuItem onClick={handleClose}>Nosotros</MenuItem>
-        <MenuItem onClick={handleClose}>Productos</MenuItem>
-        <MenuItem onClick={handleClose}>Equipos</MenuItem>
-        <MenuItem onClick={handleClose}>Servicios</MenuItem>
+        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Home</MenuItem>
+        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Nosotros</MenuItem>
+        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Productos</MenuItem>
+        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Equipos</MenuItem>
+        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Servicios</MenuItem>
       </Menu>
     </div>
   );

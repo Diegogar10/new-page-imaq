@@ -1,5 +1,11 @@
+$greenLight: #ECFCDC;
+$greenDark: #044C44;
+$greenApple: #8CBC58;
+$blueLight: #F1F1FC;
+$blueDark: #0A1929;
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -17,3 +23,4 @@
   -webkit-text-size-adjust: 100%;
 }
 
+@import './components/NavBar/NavSmall/navSmall';

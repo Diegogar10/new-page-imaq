@@ -1,0 +1,51 @@
+@import '../../../colors.scss';
+
+.navbar-container {
+  width: 100vw;
+  position: relative;
+  height: 80px;
+  background-color: rgba(255,255,255,0.05);
+  box-shadow: 0px 0px 6px 3px rgba(255,255,255,0.35);
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -1.5px;
+    left: 0;
+    right: 0;
+    border-bottom: 1.5px solid rgba(255,255,255,0.3);
+
+  }
+}
+
+.MuiPopover-root {
+  .MuiPaper-root {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: $greenLight;
+    .MuiList-root {
+      display: flex;
+      width: 80%;
+      height: 50%;
+      flex-direction: column;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.cointainer-logo {
+  position: absolute;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 50%;
+  justify-content: end;
+  .logo {
+    min-width: 80px;
+    max-width: 150px;
+    margin: 10px;
+  }
+}

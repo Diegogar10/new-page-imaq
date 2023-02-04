@@ -4,10 +4,14 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Colors } from '../../../utils/Colors';
+import { Link } from 'react-router-dom';
+import logo from '../../../assets/LogoImaq.png';
+import './NavSmall.scss';
 
 export default function NavSmall() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+  const colorTheme = Colors.greenDark; 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
@@ -16,7 +20,7 @@ export default function NavSmall() {
   };
 
   return (
-    <div>
+    <div className='navbar-container'>
       <Button
         id="positioned-button"
         aria-controls={open ? 'positioned-menu' : undefined}
@@ -41,12 +45,15 @@ export default function NavSmall() {
           horizontal: 'left',
         }}
       >
-        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Home</MenuItem>
-        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Nosotros</MenuItem>
-        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Productos</MenuItem>
-        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Equipos</MenuItem>
-        <MenuItem divider={true} sx={{color:Colors.blueDark}} onClick={handleClose}>Servicios</MenuItem>
+        <Link to='/'><MenuItem divider={true} sx={{color:colorTheme}} onClick={handleClose}>Home</MenuItem></Link>
+        <Link to='/nosotros'><MenuItem divider={true} sx={{color:colorTheme}} onClick={handleClose}>Nosotros</MenuItem></Link>
+        <Link to='/productos'><MenuItem divider={true} sx={{color:colorTheme}} onClick={handleClose}>Productos</MenuItem></Link>
+        <Link to='/equipos'><MenuItem divider={true} sx={{color:colorTheme}} onClick={handleClose}>Equipos</MenuItem></Link>
+        <Link to='/servicios'><MenuItem divider={true} sx={{color:colorTheme}} onClick={handleClose}>Servicios</MenuItem></Link>
       </Menu>
+      <div className='cointainer-logo'>
+        <img src={logo} alt='logo' className='logo'/>
+      </div>
     </div>
   );
 }

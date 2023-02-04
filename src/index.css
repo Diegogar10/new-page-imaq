@@ -1,9 +1,3 @@
-$greenLight: #ECFCDC;
-$greenDark: #044C44;
-$greenApple: #8CBC58;
-$blueLight: #F1F1FC;
-$blueDark: #0A1929;
-
 :root {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -21,6 +15,9 @@ $blueDark: #0A1929;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
 }
-
-@import './components/NavBar/NavSmall/navSmall';
+ body {
+  margin: 0;
+  padding: 0;
+ }

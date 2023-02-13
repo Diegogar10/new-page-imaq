@@ -5,13 +5,13 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Colors } from '../../../utils/Colors';
 import { Link } from 'react-router-dom';
-import logo from '../../../assets/LogoImaq.png';
+import logo from '../../../assets/icons/LogoImaq.png';
 import './NavSmall.scss';
 
 export default function NavSmall() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
-  const colorTheme = Colors.greenDark; 
+  const colorTheme = Colors.blueDark; 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };

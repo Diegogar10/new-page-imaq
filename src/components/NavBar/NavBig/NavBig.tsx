@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ButtonGeneric from '../../ButtonGeneric/ButtonGeneric';
-import logo from '../../../assets/LogoImaq.png';
+import logo from '../../../assets/icons/LogoImaq.png';
 import './NavBig.scss';
 
 const NavBig = () => {

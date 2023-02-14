@@ -10,23 +10,49 @@ const GaleryCarrusel = (
   }
 ) => {
 
-  const [image, setImage] = useState(imagen);
-  const [i, setI]=useState(0);
+  const initialState:{
+    i: number;
+    load: boolean;
+  } = {
+    i: 0,
+    load: false
+  }
+
+  const [data, setData] = useState(initialState);
   
+
   useLayoutEffect(()=>{
     setTimeout(()=>{
-      (i >= (info.length - 1))? setI(0) : setI(i+1);
+      if(data.i >= (info.length - 1)){
+        setData({
+          load:false,
+          i:0,
+        });
+      } else {
+        setData({
+          load:false,
+          i:data.i + 1,
+        });
+      } 
     },5000);
-    setImage(info[i].url);
-  },[i]);
+  },[data.i]);
+
   
-      
+  const toggleClass = () => {
+    setTimeout(()=>{
+      setData({
+        ...data,
+        load: true
+      });
+    },4500);
+  }
+
    
 
   return (
     <>    
       <div className='galery-container'>
-        <img className='picture' src={image} alt='imagen'/>
+        <img onLoad={toggleClass} className={data.load ? 'picture active' : 'picture'} src={info[data.i].url} alt='imagen'/>
       </div>
     </>
   )

@@ -8,7 +8,12 @@
     width: 100%;
     height: 100%;
     object-fit:cover;
-    animation: opa 5s linear infinite;
+    opacity: 0.85;
+    transition: all ease 1s;
+  }
+
+  .picture.active{
+    opacity: 0;
   }
 
   button {
@@ -17,14 +22,8 @@
 }
 
 @keyframes opa {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.85;
-  }
 
-  90%{
+  85%{
     opacity: 0.85;
   }
 

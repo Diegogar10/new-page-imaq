@@ -24,11 +24,11 @@
 
 
   &::before {
-    @include figuresXY('left', -70px, -40px, 20deg, 380px, 100px);
+    @include figuresXY('left', -60px, -40px, 20deg, 380px, 100px);
   }
   
   &::after {
-    @include figuresXY('right', -50px, -85px, -45deg, 280px, 110px);
+    @include figuresXY('right', -45px, -85px, -45deg, 280px, 110px);
   }
 
   .opacity__container {

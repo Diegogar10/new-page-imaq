@@ -1,0 +1,23 @@
+$greenLight: #ECFCDC;
+$greenDark: #044C44;
+$greenApple: #8CBC58;
+$blueLight: #F1F1FC;
+$blueDark: #0A1929;
+$iceStyle: rgba(255,255,255,0.5);
+
+$fontPrimary: 'Roboto', sans-serif;
+
+@mixin sombraFrontal($auto, $color, $opacity) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @if $auto{
+    background: linear-gradient(0deg, rgba(2,0,36,0.65) 0%, rgba(9,9,121,0.45) 50%, rgba(9,9,121,0.1) 100%);
+  } @else {
+    background-color: $color;
+    opacity: $opacity;
+  }
+}

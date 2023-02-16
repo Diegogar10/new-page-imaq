@@ -12,26 +12,38 @@ export interface photos {
 
 export const galeryHome: photos[] = [{
   id: 1,
-  title:'hornos belmonte',
-  description: 'Hornos de dos carros modo tunel, con puertas frontales y posteriores.',
+  title:'Fabricamos los Mejores Equipos',
+  description: 'Industra nacional con mas de 11 años de experiencia en la fabricación de equipos para la indutria de alimentos.',
   url: image1
 },
 {
   id: 2,
-  title:'hornos Qbico',
-  description: 'Hornos de dos carros modo tunel, con puertas frontales y posteriores. Con implemnetacionde ahumador liquid, duchado, lavado entre otros.',
+  title:'Hornos de Cocción',
+  description: 'Hornos indutriales para jamones, chorizos, pavos u otros productos carnicos de uno, dos o cuatro carros sencillos o tipo tunel.',
   url: image2
 },
 {
   id: 3,
-  title:'horno doble',
-  description: 'Hornos de dos carros modo tunel, con puertas fontales y posteriores.',
+  title:'Termoformadoras',
+  description: 'Disponibles para empacar todo tipo de productos como quesos, chorizos, salchichas, jamones, carnes marinadas entre otros. La alta eficiencia en el empaque.',
   url: image3
 },
 {
   id: 4,
-  title:'hornos pesonal imaq',
-  description: 'Hornos de dos carros modo tunel, con puertas fontales y posteriores.',
+  title:'Mezcladores',
+  description: 'Ideales para mezclas de pastas para hamburguesas, tocinetas, jamones, pavos entre otros. Equipos de grandes capacidades con posibilidad de vácio.',
+  url: image4
+},
+{
+  id: 5,
+  title:'Tumblers',
+  description: 'Tumbler la mejor opcion de la ciencia de marinado para una mezcla o producto, alcance grandes beneficios reducioendo la merma de su producto.',
+  url: image4
+},
+{
+  id: 6,
+  title:'Tajadoras',
+  description: 'Grandes velocidades de tajado, con la posibilidad de poder controlar la cantidad de tajadas del producto que desee.',
   url: image4
 },
 ];

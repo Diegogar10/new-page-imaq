@@ -1,13 +1,14 @@
+@import './globals';
 :root {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-family: $fontPrimary;
+  font-size: 62,8%;
   line-height: 24px;
   font-weight: 400;
   margin: 0 auto;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #0a1929;
+  background-color: $blueDark;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
